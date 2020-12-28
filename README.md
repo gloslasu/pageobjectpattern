@@ -2,28 +2,34 @@
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
-### What is this repository for? ###
+### This repository is for page:
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+[automationpractice.com](http://automationpractice.com )
+
+* This repository was created as part of the final project, a course on "Manual Tester with an introduction to automation" organized by Softie.pl
+
+## Used:	
+
+1. Java 11+
+2. Maven (This project is Maven type, so we need add support for Maven)
+3. Selenium WebDriver (We need for servicing web browswer)
+4. jUnit 5.x (We need to build test framework - for example "@Test" annotation)
+5. Page object pattern
+6. Page factory
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Summary of set up and configuration:
+
+1. IntelliJ Idea Community 2020.1 version > New > project from version controll
+2. Right click on project folder > add framework support > (check) Maven
 
 ### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
+* Dependencies:
 
-### Who do I talk to? ###
+1. com.github.javafaker version>1.0.2
+2. org.junit.jupiter version>5.6.3
+3. org.seleniumhq.selenium version>5.6.3
+4. All code of dependencies is in pom.xml file.
 
-* Repo owner or admin
-* Other community or team contact
