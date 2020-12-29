@@ -24,6 +24,17 @@ This README would normally document whatever steps are necessary to get your app
 1. IntelliJ Idea Community 2020.1 version > New > project from version controll
 2. Right click on project folder > add framework support > (check) Maven
 
+### Used packages description ###
+* In src>test>java folder we have 3 packages:
+
+1. pageobjects (which contains classes that corresponds to each of our pages and keeping methods that work on those pages, and all locators).
+
+2. tests (package which contains all logic of tests written in jUnit)
+
+3. utils (some classes that we need as additions to test, something that makes testing easier).
+
+
+
 ### Contribution guidelines ###
 
 * Dependencies:
