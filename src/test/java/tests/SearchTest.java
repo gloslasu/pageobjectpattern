@@ -16,20 +16,18 @@ public class SearchTest extends BaseTests {
 
 
     @Test
-    void shouldReturnCorrectProductListWhenPositiveSearchPhraseIsUsed() throws InterruptedException {
-
-
+    void shouldReturnCorrectProductListWhenPositiveSearchPhraseIsUsed() {
         // because our method from class HomePage are not static so we must create object
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage(driver, wait);
         homePage.openPage(); // Open main Page.
-        homePage.searchForProduct("blouse"); // give searching keyword in search box
+        homePage.searchForProduct("finding key word in body of method"); // give searching keyword in search box
         //Thread.sleep(2000);
 
         // every open new page we need to create new object of this page
-        SearchResultPage searchResultPage = new SearchResultPage(driver); // here we have object from class SearchResultPage so now we can execute on this object some methods
+        SearchResultPage searchResultPage = new SearchResultPage(driver, wait); // here we have object from class SearchResultPage so now we can execute on this object some methods
         // adding assertion to check if search result is correct (shown find product names).
         Assertions.assertTrue(searchResultPage.isProductWithNameVisible("dress"));
-        //Thread.sleep(2000);
+        // Thread.sleep(8000);
         // assertion: ('7 results have been found.')
         Assertions.assertEquals("7 results have been found.", searchResultPage.getSearchSummary());
 

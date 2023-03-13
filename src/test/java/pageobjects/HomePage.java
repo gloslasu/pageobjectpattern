@@ -1,17 +1,19 @@
 package pageobjects;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage extends BasePage{
 
-    // we need create constructor to give 'static WebDriver driver;' from src/tests/java/tests/BaseTests
-    public HomePage(WebDriver driverIn){
-    this.driver = driverIn; // driverIn is driver with comes from our method executed.
+    public HomePage(WebDriver driverIn, WebDriverWait waitIn){
+        super (driverIn, waitIn);
     }
 
-   public void openPage(){
+    public void openPage(){
         // Open main Page.
         driver.get(BASE_URL + "index.php");
     }
+
 
 }
