@@ -1,11 +1,7 @@
 package tests;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Wait;
-import pageobjects.HomePage;
+import pageobjects.OtoMotoHomePage;
 import pageobjects.LoginPage;
 import pageobjects.RegisterPage;
 import utils.RandomUser;
@@ -18,8 +14,8 @@ public class RegisterTest extends BaseTests{
         RandomUser user = new RandomUser();
         System.out.println(user); // we print used user to test. It's needed as log for tests.
 
-        HomePage homePage = new HomePage(driver, wait);
-        homePage.openPage(); // Open main Page.
+        OtoMotoHomePage otoMotoHomePage = new OtoMotoHomePage(driver, wait);
+        otoMotoHomePage.navigateToOtoMotoMainPage(); // Open main Page.
 
         LoginPage loginPage = new LoginPage(driver,wait);
         loginPage.goToRegisterForm();
@@ -35,8 +31,8 @@ public class RegisterTest extends BaseTests{
         RandomUser user = new RandomUser();
         System.out.println(user); // we print used user to test. It's needed as log for tests.
 
-        HomePage homePage = new HomePage(driver, wait);
-        homePage.openPage(); // Open main Page.
+        OtoMotoHomePage otoMotoHomePage = new OtoMotoHomePage(driver, wait);
+        otoMotoHomePage.navigateToOtoMotoMainPage(); // Open main Page.
 
         LoginPage loginPage = new LoginPage(driver,wait);
         loginPage.goToRegisterForm();

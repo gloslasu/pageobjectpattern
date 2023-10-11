@@ -41,8 +41,8 @@ public class LoginPage extends BasePage{
 
     public void signInToRealAccount(){
 
-        HomePage homePage = new HomePage(driver, wait);
-        homePage.openPage(); // Open main Page.
+        AnyHomePage anyHomePage = new AnyHomePage(driver, wait);
+        anyHomePage.openPage(); // Open main Page.
 
         BasePage basePage = new BasePage(driver, wait);
         basePage.clickSignIn();

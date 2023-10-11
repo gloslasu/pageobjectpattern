@@ -15,12 +15,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
+
 public class BaseTests {
     static WebDriver driver;
     static WebDriverWait wait;
 
     @BeforeAll
-    static void setUp(){
+    static void setUp() {
         // WebDriver drives a browser natively, like a user would be do it.
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 5); // Explicit wait
@@ -34,13 +35,18 @@ public class BaseTests {
     }
 
     @BeforeEach
-    void clearCookies(){
+    void clearCookies() {
         driver.manage().deleteAllCookies();
     }
 
-    @AfterAll
-    static void turnDown(){
-        driver.quit(); // close all tabs/windows and WebDriver
-    }
+//    @AfterAll
+////    static void turnDown(){
+////        driver.quit(); // close all tabs/windows and WebDriver
+////    }
+//
+//    static void closeDriver() {
+//        driver.close();
+//
+//    }
 
 }

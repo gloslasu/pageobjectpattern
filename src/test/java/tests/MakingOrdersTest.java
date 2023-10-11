@@ -10,8 +10,8 @@ public class MakingOrdersTest extends BaseTests{
     void shouldAddProductToTheBasketAndBuyThroughRegisterForm() throws InterruptedException {
 
         RandomUser user = new RandomUser();
-        HomePage homePage = new HomePage(driver, wait);
-        homePage.openPage();
+        OtoMotoHomePage otoMotoHomePage = new OtoMotoHomePage(driver, wait);
+        otoMotoHomePage.navigateToOtoMotoMainPage();
         ProductsPage productsPage = new ProductsPage(driver, wait);
         productsPage.addRandomProductToCartAndProceedCheckout();
 

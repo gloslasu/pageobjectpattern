@@ -1,11 +1,8 @@
 package tests;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pageobjects.BasePage;
-import pageobjects.HomePage;
+import pageobjects.OtoMotoHomePage;
 import pageobjects.LoginPage;
 
 public class LoginTest extends BaseTests {
@@ -28,8 +25,8 @@ public class LoginTest extends BaseTests {
     // negative test
     @Test
     void clickSignInButtonAndGoToLoginFormNegative(){
-        HomePage homePage = new HomePage(driver, wait);
-        homePage.openPage(); // Open main Page.
+        OtoMotoHomePage otoMotoHomePage = new OtoMotoHomePage(driver, wait);
+        otoMotoHomePage.navigateToOtoMotoMainPage(); // Open main Page.
 
         BasePage basePage = new BasePage(driver, wait);
         basePage.clickSignIn();

@@ -43,6 +43,9 @@ public class BasePage {
     WebDriverWait wait;
 
     static final String BASE_URL = "http://automationpractice.com/";
+    static final String GOOGLE_URL = "https://google.com/";
+
+    static final String OTOMOTO_URL = "https://www.otomoto.pl";
 
     public BasePage(WebDriver driverIn, WebDriverWait waitIn){ // we need create constructor to give 'static WebDriver driver;' from src/tests/java/tests/BaseTests
         this.driver = driverIn; // driverIn is driver with comes from our method executed.

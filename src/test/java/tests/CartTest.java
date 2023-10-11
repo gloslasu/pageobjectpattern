@@ -2,7 +2,7 @@ package tests;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import pageobjects.HomePage;
+import pageobjects.OtoMotoHomePage;
 import pageobjects.ProductsPage;
 
 public class CartTest extends BaseTests{
@@ -25,10 +25,10 @@ public class CartTest extends BaseTests{
     }
 
     private ProductsPage goToProductCategoryPage(int i) {
-        HomePage homePage = new HomePage(driver, wait); // we sent to this Page Object class driver and wait
-        homePage.openPage(); // Open main Page.
+        OtoMotoHomePage otoMotoHomePage = new OtoMotoHomePage(driver, wait); // we sent to this Page Object class driver and wait
+        otoMotoHomePage.navigateToOtoMotoMainPage(); // Open main Page.
         // on home page we click on first element '0' from the menu list "productCategories" (WOMEN,DRESSES,T-SHIRTS)
-        homePage.goProductCategoryByIndex(0); // go to MENU>WOMEN
+        otoMotoHomePage.goProductCategoryByIndex(0); // go to MENU>WOMEN
         // Then we want to simulate mouse move on products from the showed list on the page.
         ProductsPage productsPage = new ProductsPage(driver, wait);
         return productsPage;
